@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkte Liste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffffff, #e6dfd8);
+            overflow-x: hidden; /* Verhindert horizontales Scrollen */
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 80px; /* Logo-Größe */
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .social-icons a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #000;
+        }
+        .description {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            width: calc(100% - 40px); /* Breiter für Mobil */
+            max-width: 300px; /* Maximale Breite für größere Bildschirme */
+            margin: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: black;
+            color: rgb(245, 245, 245);
+            border: 2.6px solid black;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: rgb(74, 40, 40);
+            color: white;
+        }
+        /* Cookie-Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Standardmäßig ausblenden */
+        }
+
+        .cookie-banner p {
+            font-weight: lighter;
+            color: #424040;
+        }
+
+        .cookie-banner button {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">Vintage Resell Munich</div>
+            <img src="logo.png" alt="Logo">
+            <div class="social-icons">
+                <a href="mailto:vintageresellmunich@proton.me"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.instagram.com/vintage_resell_munich" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="description">
+            Entdecken Sie unsere Vintage Kleider.
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="1728669889-removebg-preview.png" alt="Produkt 1">
+                <h2>Adidas Vintage Windbreaker Jacke</h2>
+                <p>20,00 Euro</p>
+                <a href="https://www.vinted.de/items/5199458343-adidas-vintage-windbreaker-jacke-trainingsjacke?referrer=catalog" class="button">Ansehen</a>
+            </div>
+            <div class="product">
+                <img src="1728486905-removebg-preview.png" alt="Produkt 2">
+                <h2>Brandy Melville Heavyweight Hoodie</h2>
+                <p>25,00 Euro</p>
+                <a href="https://www.vinted.de/items/5188325468-brandy-melville-heavyweight-hoodie-jacke-full-zipper" class="button">Ansehen</a>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Produkt 3">
+                <h2>Produkt 3</h2>
+                <p>Preis: 30€</p>
+                <a href="https://www.vinted.de" class="button">Ansehen</a>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Produkt 4">
+                <h2>Produkt 4</h2>
+                <p>Preis: 15€</p>
+                <a href="https://www.vinted.de" class="button">Ansehen</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <strong>Wir verwenden Cookies</strong>
+        <p>
+        Diese Website verwendet Cookies, um Ihnen die beste Erfahrung zu bieten. <br> Wir können diese zur Analyse unserer Besucherdaten platzieren, um unsere Webseite zu verbessern, personalisierte Inhalte anzuzeigen und Ihnen ein großartiges Webseiten-Erlebnis zu bieten. Für weitere Informationen zu den von uns verwendeten Cookies öffnen Sie die Einstellungen.
+        </p>
+        
+        <button onclick="acceptCookies()">Akzeptieren</button>
+        <button onclick="acceptCookies()">Nein, ablehnen</button>
+        <button onclick="acceptCookies()">Anpassen</button>
+        
+    </div>
+
+    <script>
+        // Cookie-Banner anzeigen
+        window.onload = function() {
+            document.getElementById('cookieBanner').style.display = 'block';
+        }
+
+        // Funktion zum Akzeptieren der Cookies
+        function acceptCookies() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Hier kannst du auch einen Cookie setzen
+        }
+    </script>
+
+</body>
+</html>
