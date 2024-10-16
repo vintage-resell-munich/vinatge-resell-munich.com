@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #faf9f9, #e6dfd8);
+            background: linear-gradient(to bottom, #faf9f9, #ede7e1);
             overflow-x: hidden;
         }
         .container {
@@ -21,12 +21,17 @@
             text-align: center;
         }
         .header {
+            top: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
             margin-bottom: 20px;
-            
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.17);
+            padding: 27px;
+            width: 100%;
+            border-radius: 6px;
         }
         .logo {
             width: 80px;
@@ -38,19 +43,21 @@
             text-align: center;
             flex: 1;
             font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-font-weight: normal;
+font-weight: 400;
         }
         .menu-toggle {
             display: block;
             font-size: 22px;
             cursor: pointer;
             z-index: 10;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
         }
         .cart-icon a {
             color: black;
-            font-size: 20.5px;
+            font-size: 21px;
             text-decoration: none;
             z-index: 10;
+            text-shadow: 0 0.32px 0.64px rgba(0, 0, 0, 0.4);
         }
         .description {
             font-size: 0.9em;
@@ -103,11 +110,7 @@ font-weight: normal;
             color: white;
         }
 
-        .outer-border{
-            padding: 10px; /* Abstand für den inneren Rand */
-            border-radius: 10px;
-            border: 1px solid black;
-              }
+
         /* Cookie-Banner */
         .cookie-banner {
             
@@ -209,7 +212,7 @@ font-weight: normal;
                 <h2>Adidas Vintage Windbreaker Jacke</h2>
               
                 <p>36,00 Euro</p>
-                <a href="https://www.vinted.de/items/5199458343-adidas-vintage-windbreaker-jacke-trainingsjacke?referrer=catalog" class="button">𖠩 Ansehen</a>
+                <a href="https://www.vinted.de/items/5199458343-adidas-vintage-windbreaker-jacke-trainingsjacke?referrer=catalog" class="button">Ansehen</a>
             
             </div>
             <div class="product">
@@ -220,7 +223,7 @@ font-weight: normal;
                 <img src="1728486905-removebg-preview.png" alt="Produkt 2">
                 <h2>Brandy Melville Heavyweight Hoodie</h2>
                 <p>25,00 Euro</p>
-                <a href="https://www.vinted.de/items/5188325468-brandy-melville-heavyweight-hoodie-jacke-full-zipper" class="button"> 𖠩 Ansehen</a>
+                <a href="https://www.vinted.de/items/5188325468-brandy-melville-heavyweight-hoodie-jacke-full-zipper" class="button">  Ansehen</a>
             </div>
             <div class="product">
                 <div class="social-icons">
@@ -230,7 +233,7 @@ font-weight: normal;
                 <img src=" 1728401410-removebg-preview.png " alt="Produkt 3">
                 <h2> Vintage Arrow Blue Jeans Co Shirt Jacke Shacket Ment XLT Blue Plaid Flannel </h2>
                 <p>24,00 Euro</p>
-                <a href="https://www.vinted.de/items/5182868022-vintage-arrow-blue-jeans-co-shirt-jacke-shacket-ment-xlt-blue-plaid-flannel" class="button">𖠩 Ansehen</a>
+                <a href="https://www.vinted.de/items/5182868022-vintage-arrow-blue-jeans-co-shirt-jacke-shacket-ment-xlt-blue-plaid-flannel" class="button">Ansehen</a>
             </div>
             <div class="product">
                 <div class="social-icons">
@@ -240,11 +243,11 @@ font-weight: normal;
                 <img src=" 1728207505-removebg-preview.png " alt="Produkt 4">
                 <h2>  Vintage Starter Classic Windbreaker Jacke </h2>
                 <p>20,00 Euro</p>
-                <a href=" https://www.vinted.de/items/5166805822-vintage-starter-classic-windbreaker-jacke " class="button"> 𖠩 Ansehen</a>
+                <a href=" https://www.vinted.de/items/5166805822-vintage-starter-classic-windbreaker-jacke " class="button">  Ansehen</a>
             </div>
         </div>
     </div>
-    <div class="outer-border">
+  
     <div class="cookie-banner" id="cookieBanner">
         <strong>Wir verwenden Cookies</strong>
         <p>
@@ -255,7 +258,7 @@ font-weight: normal;
         <button onclick="rejectCookies()">Ablehnen</button>
         <button onclick="customizeCookies()">Anpassen</button>
     </div>
-    </div>
+    
 
     <script>
         // Cookie-Banner anzeigen
