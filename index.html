@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkte Liste</title>
+    <title>Vintage-Resell-Munich</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #ffffff, #e0d9d2);
+            background: linear-gradient(to bottom, #ffffff, #e9e3de);
             overflow-x: hidden;
         }
         .container {
@@ -35,8 +35,8 @@
             margin: 0 auto;
         }
         .shop-name {
-            font-size: 1.375em;
-            font-weight: bold;
+            font-size: 1.36em;
+            font-weight: bolder;
             text-align: center;
             flex: 1;
             font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
@@ -120,7 +120,7 @@ font-weight: 500;
            
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow:  4px 8px rgba(0, 0, 0, 0.3);
             transition: bottom 0.5s ease;
             z-index: 1000;
         }
@@ -130,28 +130,38 @@ font-weight: 500;
             margin: 10px 0;
             font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 font-weight: normal;
-border: 1.3px solid black;
+border-top: 1.3px solid black;
+
 padding: 10px 24px;
         }
-        .cookie-banner button {
+        .cookie-banner .button1 {
             background-color: black;
             color: white;
             border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
+            border-radius: 16px;
+            padding: 8px 8px;
             cursor: pointer;
+            margin-left: 10px;
+        }
+        .cookie-banner .button2 {
+            background: none;
+            color: rgb(0, 0, 0);
+            border: 1.7px solid black;
+            border-radius: 16px;
+            padding: 8px 8px;
+            cursor: pointer;
+            font-weight: bolder;
             margin-left: 10px;
         }
         .menu {
             display: none;
-            left: 40px;
-            top: 30%;
-            right: 40px;
+            top: 40%;
+          
             background-color: white;
             border-radius: 9px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-           
-            z-index: 999;
+            left: 34%;
+            z-index: 1000;
             width: 220px;
             text-align: center;
             
@@ -195,16 +205,19 @@ padding: 10px 24px;
             <div class="cart-icon">
                 <a href="https://www.vinted.de" target="_blank"><i class="fas fa-shopping-cart"></i></a>
             </div>
-            <div class="menu" id="menu">
-                <a href="https://www.vinted.de/member/230294273-vintage-resell-muc" target="_blank">Shop</a>
-                <a href="https://www.vinted.de/member/230294273-vintage-resell-muc" target="_blank">Pieces</a>
-                <a href="https://www.instagram.com/vintage_resell_munich" target="_blank">Instagram</a>
-            </div>
+            
         </div>
         <img src="logo.png" alt="Logo" class="logo">
         <div class="description">
             Aktuelle Vintage Kleider der Woche.
         </div>
+
+        <div class="menu" id="menu">
+            <a href="https://www.vinted.de/member/230294273-vintage-resell-muc" target="_blank">Shop</a>
+            <a href="https://www.vinted.de/member/230294273-vintage-resell-muc" target="_blank">Pieces</a>
+            <a href="https://www.instagram.com/vintage_resell_munich" target="_blank">Instagram</a>
+        </div>
+
         <div class="product-container">
             <div class="product">
                 <div class="social-icons">
@@ -271,16 +284,16 @@ padding: 10px 24px;
             </div>
         </div>
     </div>
-  
+ 
     <div class="cookie-banner" id="cookieBanner">
         <strong>Wir verwenden Cookies</strong>
         <p>
             Diese Website verwendet Cookies, um Ihnen die beste Erfahrung zu bieten. <br>
             Cookies helfen uns, die Nutzung der Webseite zu analysieren, personalisierte Inhalte anzuzeigen und Ihnen ein großartiges Benutzererlebnis zu bieten. Durch die Nutzung dieser Webseite stimmen Sie der Verwendung von Cookies zu.
         </p>
-        <button onclick="acceptCookies()">Akzeptieren</button>
-        <button onclick="rejectCookies()">Ablehnen</button>
-        <button onclick="customizeCookies()">Anpassen</button>
+        <button class="button1" onclick="acceptCookies()">Akzeptieren</button>
+        <button class="button2" onclick="rejectCookies()">Ablehnen</button>
+        <button class="button1" onclick="customizeCookies()">Anpassen</button>
     </div>
     
 
