@@ -131,7 +131,7 @@ font-weight: 500;
             font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 font-weight: normal;
 border-top: 1.3px solid black;
-
+border-bottom: 1.2px solid black;
 padding: 10px 24px;
         }
         .cookie-banner .button1 {
@@ -142,6 +142,7 @@ padding: 10px 24px;
             padding: 8px 8px;
             cursor: pointer;
             margin-left: 10px;
+            font-weight: bolder;
         }
         .cookie-banner .button2 {
             background: none;
@@ -305,12 +306,12 @@ padding: 10px 24px;
 
         // Funktion zum Akzeptieren der Cookies
         function acceptCookies() {
-            document.getElementById('cookieBanner').style.bottom = '-200px';
+            document.getElementById('cookieBanner').style.bottom = '-250px';
         }
 
         // Funktion zum Ablehnen der Cookies
         function rejectCookies() {
-            document.getElementById('cookieBanner').style.bottom = '-200px';
+            document.getElementById('cookieBanner').style.bottom = '-250px';
         }
 
         // Funktion zum Anpassen der Cookies
