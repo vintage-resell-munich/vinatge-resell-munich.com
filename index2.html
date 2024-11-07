@@ -3,178 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkte Liste</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Vintage Resell Munich</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #f6f5f5, #e6dfd8);
-            overflow-x: hidden; /* Verhindert horizontales Scrollen */
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .header img {
-            width: 80px; /* Logo-Größe */
-        }
-        .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-        }
-        .social-icons a {
-            margin-left: 15px;
-            text-decoration: none;
-            color: #000;
-        }
-        .description {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .product-container {
-            display: flex;
-            flex-wrap: wrap;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
             justify-content: center;
         }
-        .product {
-            background-color: white;
-            border-radius: 12px;
-            padding: 20px;
-            width: calc(100% - 40px); /* Breiter für Mobil */
-            max-width: 300px; /* Maximale Breite für größere Bildschirme */
-            margin: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
+        .product-card {
+            max-width: 300px;
+            margin: 0 auto;
         }
-        .product img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        .button {
-            background-color: black;
-            color: rgb(245, 245, 245);
-            border: 2.6px solid black;
-            border-radius: 6px;
-            padding: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 16px;
-            display: inline-block;
-        }
-        .button:hover {
-            background-color: rgb(74, 40, 40);
-            color: white;
-        }
-        /* Cookie-Banner */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #fff;
-            border-top: 1px solid #ccc;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-            display: none; /* Standardmäßig ausblenden */
+        .logox{
+            margin-top: 4px;
+            
+            width: 55px;
+          }
+        .w-fullx{
+border: 1px solid rgb(28, 28, 28);
+border-radius: 4px;
+
         }
 
-        .cookie-banner p {
-            font-weight: lighter;
-            color: #424040;
-        }
+.product-card{
+    border: 1.2px solid black;
+    
+}
 
-        .cookie-banner button {
-            background-color: black;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            margin-left: 10px;
-            margin: 10px;
-        }
     </style>
 </head>
-<body>
+<body class="min-h-screen bg-gray-100 flex flex-col">
+    <header class="sticky top-0 z-50 w-full border-b bg-white bg-opacity-95 backdrop-blur">
+        <div class="container mx-auto flex h-14 items-center px-4">
+            <div class="mr-4 flex">
+                <a href="/" class="mr-6 flex items-center space-x-2 font-bold">
+                    Vintage Resell Munich
+                </a>
+            </div>
+            <div class="flex flex-1 items-center space-x-2">
+                <div class="w-full flex items-center space-x-2">
+                    <div class="relative w-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-2.5 top-2.5 h-4 w-4 text-black-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input type="search" placeholder="  ⠀  Suchen..." class="w-fullx">
+                    </div>
+                </div>
+            </div>
+            <div class="ml-auto flex items-center space-x-4">
+                <img src="Design ohne Titel-2.png" alt="Logo" class="logox">
+                <button id="menuButton" class="p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
 
-    <div class="container">
-        <div class="header">
-            <div class="logo">Vintage Resell Munich</div>
-            <img src="logo.png" alt="Logo">
-            <div class="social-icons">
-                <a href="mailto:vintageresellmunich@proton.me"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.instagram.com/vintage_resell_munich" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+    <nav id="mobileMenu" class="fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-200 ease-in-out z-50">
+        <div class="p-6">
+            <button id="closeMenu" class="absolute top-4 right-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <ul class="space-y-4">
+                <li>
+                    <a href="/ueber-uns" class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Über uns</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shop" class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span>Zum Shop</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="description">
-            Entdecken Sie unsere Vintage Kleider.
-        </div>
-        <div class="product-container">
-            <div class="product">
-                <img src="1728669889-removebg-preview.png" alt="Produkt 1">
-                <h2>Adidas Vintage Windbreaker Jacke</h2>
-                <p>20,00 Euro</p>
-                <a href="https://www.vinted.de/items/5199458343-adidas-vintage-windbreaker-jacke-trainingsjacke?referrer=catalog" class="button">Ansehen</a>
-            </div>
-            <div class="product">
-                <img src="1728486905-removebg-preview.png" alt="Produkt 2">
-                <h2>Brandy Melville Heavyweight Hoodie</h2>
-                <p>25,00 Euro</p>
-                <a href="https://www.vinted.de/items/5188325468-brandy-melville-heavyweight-hoodie-jacke-full-zipper" class="button">Ansehen</a>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Produkt 3">
-                <h2>Produkt 3</h2>
-                <p>Preis: 30€</p>
-                <a href="https://www.vinted.de" class="button">Ansehen</a>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Produkt 4">
-                <h2>Produkt 4</h2>
-                <p>Preis: 15€</p>
-                <a href="https://www.vinted.de" class="button">Ansehen</a>
-            </div>
-        </div>
-    </div>
+    </nav>
 
-    <div class="cookie-banner" id="cookieBanner">
-        <strong>Wir verwenden Cookies</strong>
-        <p>
-        Diese Website verwendet Cookies, um Ihnen die beste Erfahrung zu bieten. <br> Wir können diese zur Analyse unserer Besucherdaten platzieren, um unsere Webseite zu verbessern, personalisierte Inhalte anzuzeigen und Ihnen ein großartiges Webseiten-Erlebnis zu bieten. Für weitere Informationen zu den von uns verwendeten Cookies öffnen Sie die Einstellungen.
-        </p>
-        
-        <button onclick="acceptCookies()">Akzeptieren</button>
-        <button onclick="acceptCookies()">Nein, ablehnen</button>
-        <button onclick="acceptCookies()">Anpassen</button>
-        
-    </div>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="product-grid" id="productGrid"></div>
+    </main>
+
+    <footer class="border-t mt-8 bg-gray-100">
+        <div class="container mx-auto py-6 px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-sm text-gray-600 mb-4 md:mb-0">
+                © 2024 Vintage Resell Munich. Alle Rechte vorbehalten.
+            </div>
+            <nav class="flex space-x-4">
+                <a href="/impressum" class="text-sm text-gray-600 hover:underline">Impressum</a>
+                <a href="/datenschutz" class="text-sm text-gray-600 hover:underline">Datenschutz</a>
+                <a href="/agb" class="text-sm text-gray-600 hover:underline">AGB</a>
+            </nav>
+        </div>
+    </footer>
 
     <script>
-        // Cookie-Banner anzeigen
-        window.onload = function() {
-            document.getElementById('cookieBanner').style.display = 'block';
+        const products = [
+            { id: 1, title: "DIESEL MARKE × VINTAGE", subtitle: "Vintage Diesel Track Jacket", size: "L", currentPrice: 35, originalPrice: 59, discount: "46% Rabatt", image: "Photoroom-20241106_165610.png", timeAgo: "vor 1 Tag" },
+            { id: 2, title: "DESIGNER × STREET", subtitle: "Y2K OSU Sweater 2003", size: "L", currentPrice: 30, originalPrice: 45, discount: "11% Rabatt", image: "Photoroom-20241106_165256.png", timeAgo: "vor 2 Tagen" },
+            { id: 3, title: "USA × VINTAGE", subtitle: "Las Vegas Vintage Sweater 80s", size: "L", currentPrice: 30, originalPrice: 49, discount: "45% Rabatt", image: "Photoroom-20241106_165233.png", timeAgo: "vor etwa 4 Stunden" },
+            { id: 4, title: "ADIDAS MARKE × VINTAGE", subtitle: "Adidas Vintage Sweater 90s", size: "M", currentPrice: 13, originalPrice: 26, discount: "50% Rabatt", image: "Photoroom-20241106_165543.png", timeAgo: "vor etwa 2 Stunden" },
+            { id: 5, title: "ADIDAS × RETRO", subtitle: "Y2K Vintage Adidas Windbreaker Jacke", size: "XL", currentPrice: 36, originalPrice: 50, discount: "43% Rabatt", image: "1728669889-removebg-preview.png", timeAgo: "vor 3 Tagen" },
+            { id: 6, title: "VINTAGE SPORTSWEAR", subtitle: "Retro Trainingsanzug", size: "S", currentPrice: 55, originalPrice: 110, discount: "50% Rabatt", image: "https://picsum.photos/400/400?random=6", timeAgo: "vor 1 Woche" },
+            { id: 7, title: "LUXUS VINTAGE", subtitle: "Seiden Bluse", size: "M", currentPrice: 89, originalPrice: 200, discount: "55% Rabatt", image: "https://picsum.photos/400/400?random=7", timeAgo: "vor 5 Tagen" },
+            { id: 8, title: "STREETWEAR KLASSIKER", subtitle: "Oversize Hoodie", size: "L", currentPrice: 42, originalPrice: 85, discount: "50% Rabatt", image: "https://picsum.photos/400/400?random=8", timeAgo: "vor 2 Wochen" },
+            { id: 9, title: "VINTAGE ACCESSOIRES", subtitle: "Leder Gürteltasche", size: "One Size", currentPrice: 35, originalPrice: 70, discount: "50% Rabatt", image: "https://picsum.photos/400/400?random=9", timeAgo: "vor 3 Tagen" },
+            { id: 10, title: "ECO VINTAGE", subtitle: "Upcycled Patchwork Rock", size: "S", currentPrice: 60, originalPrice: 120, discount: "50% Rabatt", image: "https://picsum.photos/400/400?random=10", timeAgo: "vor 6 Tagen" }
+        ];
+
+        function createProductCard(product) {
+            return `
+                <div class="border rounded-lg overflow-hidden bg-white product-card">
+                    <div class="relative">
+                        <div class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 text-sm">
+                            KOSTENLOSER VERSAND
+                        </div>
+                        <img src="${product.image}" alt="${product.title}" class="w-full object-cover aspect-square">
+                        <button class="absolute top-2 right-2 p-2 bg-white bg-opacity-80 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-semibold">${product.title}</h3>
+                                <p class="text-sm text-gray-600">${product.subtitle}</p>
+                            </div>
+                            <span class="text-lg font-semibold">${product.size}</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl font-bold">${product.currentPrice}€</span>
+                            <span class="text-gray-500 line-through">${product.originalPrice}€</span>
+                            <span class="text-blue-600">${product.discount}</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">${product.timeAgo}</span>
+                            <a href="#" class="text-sm underline">Ähnliche Artikel</a>
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
-        // Funktion zum Akzeptieren der Cookies
-        function acceptCookies() {
-            document.getElementById('cookieBanner').style.display = 'none';
-            // Hier kannst du auch einen Cookie setzen
+        function renderProducts() {
+            const productGrid = document.getElementById('productGrid');
+            productGrid.innerHTML = products.map(createProductCard).join('');
         }
+
+        renderProducts();
+
+        // Mobile menu functionality
+        const menuButton = document.getElementById('menuButton');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
     </script>
-
 </body>
 </html>
