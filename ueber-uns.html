@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Uns / Vintage Resell Munich</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    box-shadow: 0px 4px 8px rgba(2, 2, 2, 0.19);
+}
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            justify-content: center;
+        }
+        .product-card {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .logox{
+            margin-top: 4px;
+            
+            width: 55px;
+          }
+        .w-fullx{
+border: 1px solid rgb(28, 28, 28);
+border-radius: 4px;
+
+        }
+
+.product-card{
+    border: 1.2px solid black;
+    
+}
+
+h3{
+    font-size: larger;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contentx{
+    margin-top: 35px;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 25px;
+}
+.contentx button {
+    text-align: center;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    padding: 4px 9px ;
+    
+}   
+
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col">
+    <header class="sticky top-0 z-50 w-full border-b bg-white bg-opacity-95 backdrop-blur">
+        <div class="container mx-auto flex h-14 items-center px-4">
+            <div class="mr-4 flex">
+                <a href="/" class="mr-6 flex items-center space-x-2 font-bold">
+                    Über uns - VRM
+                </a>
+            </div>
+         
+            <div class="ml-auto flex items-center space-x-4">
+                <img src="Design ohne Titel-2.png" alt="Logo" class="logox">
+                <button onclick="location.href='index.html'" id="menuButton" class="p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="mobileMenu"  class="fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-200 ease-in-out z-50">
+        <div class="p-6">
+            <button id="closeMenu" class="absolute top-4 right-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <ul class="space-y-4">
+                <li>
+                    <a href="/ueber-uns" class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Über uns</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shop" class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span>Zum Shop</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+        <div class="contentx">
+            <p>⠀ </p>
+            <h3>Vintage-Resell-Munich - Wöchentlicher Vintage Drop</h3>
+            <p>⠀ </p>
+            <p><strong>Über Uns</strong> </p>
+            <p>⠀ </p>
+
+              <p>  Willkommen bei <strong> Resell Munich! </strong> Seit einigen Monaten sind wir eure Adresse für sorgfältig ausgewählte, seltene Vintage-Pieces in und um München. Jede Woche bringen wir neue Drops mit besonderen Pieces, die euch begeistern werden. </p>
+<p>⠀ </p>
+                 <p>Über unsere <strong> Instagram-Seite </strong> halten wir euch regelmäßig auf dem Laufenden und geben Einblicke in unsere neuesten Drops.</p>
+                <p>⠀ </p>
+                Aktuell verschicken wir <strong> deutschlandweit </strong> , und schon bald könnt ihr uns auch in unserem lokalen Store in München besuchen. Wir sind immer offen für Ankäufe und stehen euch jederzeit für Fragen zur Verfügung. </p>
+                <p> Schreibt uns gerne unter:</p>
+                <p>⠀ </p>
+                <p><u><strong>vintage-resell-munich@protonmail.com</strong></u></p>
+                <p>⠀ </p>
+                <p> <strong> oder </strong></p>
+                <p>⠀ </p>
+                <p>
+                    <button class="insta" onclick="location.href='https://www.instagram.com/vintage_resell_munich';" target="_blank"> Instagram </button>
+                </p>
+        </div>
+ 
+    <footer class="border-t mt-8 bg-gray-100">
+        <div class="container mx-auto py-6 px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-sm text-gray-600 mb-4 md:mb-0">
+                © 2024 Vintage Resell Munich. Alle Rechte vorbehalten.
+            </div>
+            <nav class="flex space-x-4">
+                <a href="/impressum" class="text-sm text-gray-600 hover:underline">Impressum</a>
+                <a href="/datenschutz" class="text-sm text-gray-600 hover:underline">Datenschutz</a>
+                <a href="/agb" class="text-sm text-gray-600 hover:underline">AGB</a>
+            </nav>
+        </div>
+    </footer>
+
+  <script>
+
+        function renderProducts() {
+            const productGrid = document.getElementById('productGrid');
+            productGrid.innerHTML = products.map(createProductCard).join('');
+        }
+
+        renderProducts();
+
+        // Mobile menu functionality
+        const menuButton = document.getElementById('menuButton');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+</html>

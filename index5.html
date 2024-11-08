@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage-Resell-Munich</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fffdfd, #f1ebeb, rgba(255, 255, 255, 0.848));
+            overflow-x: hidden;
+        }
+
+ 
+
+
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px ;
+            padding-left: 12px;
+            padding-right: 12PX;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+          
+        } 
+        .logo {
+            width: 80px;
+            margin: 0 auto;
+            box-shadow: 0 1ps 2px rgba(0, 0, 0, 0.2);
+        }
+        .shop-name {
+            font-size: 1.36em;
+            font-weight: bolder;
+            text-align: center;
+            flex: 1;
+            font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+font-weight: 500;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+        }
+        .menu-toggle {
+            
+            display: block;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 10;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .cart-icon a {
+           
+            color: black;
+            font-size: 21px;
+            text-decoration: none;
+            z-index: 10;
+            text-shadow: 0 0.32px 0.64px rgba(0, 0, 0, 0.35);
+        }
+        .description {
+            font-size: 0.9em;
+            color: #404040;
+            margin-bottom: 20px;
+
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product {
+            background-color: rgb(255, 255, 255);
+            border-radius: 12px;
+            padding: 20px;
+            width: calc(100% - 40px);
+            max-width: 290px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            
+        }
+
+
+        h2{
+            border-bottom: 1px solid rgb(143, 142, 142);
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .button {
+            background-color: black;
+            color: rgb(245, 245, 245);
+            border: 2px solid black;
+            border-radius: 6px;
+            padding: 7px 12.5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 15px;
+            display: inline-block;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: rgb(74, 40, 40);
+            color: white;
+        }
+
+
+        /* Cookie-Banner */
+        .cookie-banner {
+            border: none;
+            border-radius: 8px;
+            position: fixed;
+            bottom: -400px;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+           
+            padding: 20px;
+            text-align: center;
+            box-shadow:  4px 8px rgba(0, 0, 0, 0.3);
+            transition: bottom 0.5s ease;
+            z-index: 1000;
+        }
+        .cookie-banner p {
+            
+            color: #424040;
+            margin: 10px 0;
+            font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+font-weight: normal;
+border-top: 1.3px solid black;
+
+padding: 10px 24px;
+        }
+        .cookie-banner .button1 {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 8px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .cookie-banner .button2 {
+            background: none;
+            color: rgb(0, 0, 0);
+            border: 1.7px solid black;
+            border-radius: 6px;
+            padding: 8px 8px;
+            cursor: pointer;
+            font-weight: bolder;
+            margin-left: 10px;
+        }
+        .menu {
+            display: none;
+            top: 40%;
+          
+            background-color: white;
+            border-radius: 9px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            left: 34%;
+            z-index: 1000;
+            width: 220px;
+            text-align: center;
+            
+            
+        }
+        .menu a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .social-icons a {
+            margin-left: 5px;
+            text-align: left;
+            left: 15px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                transition: ease-in-out;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="shop-name">Vintage Resell Munich</div>
+            <div class="cart-icon">
+                <a href="https://www.vinted.de" target="_blank"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            
+        </div>
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="description">
+            Aktuelle Vintage Kleider der Woche.
+        </div>
+
+        <div class="menu" id="menu">
+            <a href="https://www.vinted.de/member/230294273-vintage-resell-muc" target="_blank">Shop</a>
+            <a href="https://www.vinted.de/member/230294273-vintage-resell-muc" target="_blank">Pieces</a>
+            <a href="https://www.instagram.com/vintage_resell_munich" target="_blank">Instagram</a>
+        </div>
+
+        <div class="product-container">
+            <div class="product">
+                <div class="social-icons">
+                    <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <img src="1728669889-removebg-preview.png" alt="Produkt 1">
+                <h2>Adidas Vintage Windbreaker Jacke</h2>
+              
+                <p>36,00 Euro</p>
+                <a href="https://www.vinted.de/items/5199458343-adidas-vintage-windbreaker-jacke-trainingsjacke?referrer=catalog" class="button">Ansehen</a>
+            
+            </div>
+
+            <div class="product">
+                <div class="social-icons">
+                    <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <img src=" vintage-sweater-removebg-preview.png " alt="Produkt 2">
+                <h2> Rebook Vintage Sweater L</h2>
+                <p>35,00 Euro</p>
+                <a href="https://www.vinted.de/items/password" class="button">  Ansehen</a>
+            </div>
+            <div class="product">
+                <div class="social-icons">
+                    <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <img src=" brandy-jacket-removebg-preview.png " alt="Produkt 2">
+                <h2>Brandy Melville Heavyweight Hoodie</h2>
+                <p>25,00 Euro</p>
+                <a href="https://www.vinted.de/items/5188325468-brandy-melville-heavyweight-hoodie-jacke-full-zipper" class="button">  Ansehen</a>
+            </div>
+            <div class="product">
+                <div class="social-icons">
+                    <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <img src=" 1728401410-removebg-preview.png " alt="Produkt 3">
+                <h2> Vintage Arrow Blue Jeans Co Shirt Jacke Shacket Ment XLT Blue Plaid Flannel </h2>
+                <p>24,00 Euro</p>
+                <a href="https://www.vinted.de/items/5182868022-vintage-arrow-blue-jeans-co-shirt-jacke-shacket-ment-xlt-blue-plaid-flannel" class="button">Ansehen</a>
+            </div>
+            <div class="product">
+                <div class="social-icons">
+                    <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <img src=" 1728207505-removebg-preview.png " alt="Produkt 4">
+                <h2>  Vintage Starter Classic Windbreaker Jacke </h2>
+                <p>20,00 Euro</p>
+                <a href=" https://www.vinted.de/items/5166805822-vintage-starter-classic-windbreaker-jacke " class="button">  Ansehen</a>
+            </div>
+            <div class="product">
+                <div class="social-icons">
+                    <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <img src=" vintage-sweater2-removebg-preview.png " alt="Produkt 2">
+                <h2> Old 90s Rebook Vintage Sweater</h2>
+                <p>45,00 Euro</p>
+                <a href="https://www.vinted.de/items/password" class="button">  Ansehen</a>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="cookie-banner" id="cookieBanner">
+        <strong>Wir verwenden Cookies</strong>
+        <p>
+            Diese Website verwendet <strong>Cookies</strong>,  um Ihnen die beste Erfahrung zu bieten. <br>
+            Cookies helfen uns, die Nutzung der Webseite zu analysieren, personalisierte Inhalte anzuzeigen und Ihnen ein großartiges <strong> Benutzererlebnis </strong> zu bieten. Durch die Nutzung dieser Webseite stimmen Sie der Verwendung von <strong>Cookies</strong> zu.
+        </p>
+        <button class="button1" onclick="acceptCookies()">Akzeptieren</button>
+        <button class="button2" onclick="rejectCookies()">Ablehnen</button>
+        <button class="button1" onclick="customizeCookies()">Anpassen</button>
+    </div>
+    
+
+    <script>
+        // Cookie-Banner anzeigen
+        window.onload = function() {
+            document.getElementById('cookieBanner').style.bottom = '0';
+        }
+
+        // Funktion zum Akzeptieren der Cookies
+        function acceptCookies() {
+            document.getElementById('cookieBanner').style.bottom = '-280px';
+        }
+
+        // Funktion zum Ablehnen der Cookies
+        function rejectCookies() {
+            document.getElementById('cookieBanner').style.bottom = '-280px';
+        }
+
+        // Funktion zum Anpassen der Cookies
+        function customizeCookies() {
+            alert('Hier können Sie Ihre Cookie-Einstellungen anpassen.');
+        }
+
+        // Funktion zum Umschalten des Menüs
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
